@@ -49,3 +49,24 @@ filtros.forEach(botao => {
         });
     });
 });
+
+document.getElementById('newsletter').addEventListener('submit', function (e) {
+    const emailInput = document.getElementById('email');
+    const errorSpan = document.getElementById('email-error');
+
+    if (!emailInput.value) {
+        e.preventDefault(); // impede o envio do formulário
+        errorSpan.textContent = 'Preencha com seu e-mail';
+        emailInput.focus();
+    } else if (!emailInput.validity.valid) {
+        e.preventDefault();
+        errorSpan.textContent = 'Informe um e-mail válido';
+        emailInput.focus();
+    } else {
+        errorSpan.textContent = ''; // limpa mensagens anteriores
+    }
+});
+
+document.querySelector('.menu-toggle').onclick = function () {
+    document.querySelector('nav ul').classList.toggle('active');
+}

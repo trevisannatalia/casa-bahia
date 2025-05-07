@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Casa Bahia</title>
+    <title>Casa L'arte Bahia</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -13,7 +13,10 @@
 <body>
     <header>
         <nav>
-            <h1>L’arte Bahia</h1>
+            <div class="nav-row">
+                <h1>Casa L’arte Bahia</h1>
+                <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+              </div>
             <ul>
                 <li><a href="#">Início</a></li>
                 <li><a href="#imersao">Imersão Artística</a></li>
@@ -26,13 +29,13 @@
 
         <!-- NOVO: Informações do lado direito -->
         <div class="header-info">
-            <div class="horarios">
+            <div class="horarios header-content">
                 <strong>Funcionamento:</strong> Ter-Dom, 10h às 17h30
             </div>
-            <div class="contatos">
+            <div class="contatos header-content">
                 <span>contato@casabahia.com</span> | <span>(71) 99999-9999</span>
             </div>
-            <div class="redes-sociais">
+            <div class="redes-sociais header-content">
                 <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
                 <a href="#"><i class="fab fa-instagram social-icon"></i></a>
                 <a href="#"><i class="fab fa-twitter social-icon"></i></a>
@@ -56,7 +59,8 @@
     <main>
         <section id="sobre" class="section">
             <h2>Sobre</h2>
-            <p>A Casa Bahia é um centro cultural independente que celebra a diversidade das expressões artísticas do
+            <p>A Casa L'arte Bahia é um centro cultural independente que celebra a diversidade das expressões artísticas
+                do
                 Nordeste e do Brasil contemporâneo. Localizada no coração de Salvador, abriga projetos, encontros,
                 oficinas, experiências e exposições com foco em acessibilidade, formação e experimentação artística.</p>
         </section>
@@ -71,6 +75,8 @@
         <section id="exposicoes" class="section">
             <div class="section-title">
                 <h2>Programação</h2>
+                <p>Nossa programação é rotativa e diversa, recebendo artistas de diferentes linguagens e propostas ao longo do ano. 
+                    A cada ciclo, novas experiências ocupam nossos espaços, oferecendo ao público uma agenda sempre renovada e pulsante</p>
                 <div class="filters" aria-label="Filtro de eventos">
                     <button class="filter" data-filter="todos">Todos</button>
                     <button class="filter" data-filter="escultura">Escultura</button>
@@ -88,6 +94,21 @@
                     <img src="pintura.jpeg" alt="Evento de pintura" />
                     <h3>Pinturas de Salvador</h3>
                     <p>15/06/2025</p>
+                </div>
+                <div class="evento fotografia">
+                    <img src="fotografia.jpg" alt="Evento de fotografia" />
+                    <h3>Olhares do Recôncavo</h3>
+                    <p>30/06/2025</p>
+                </div>
+                <div class="evento pintura">
+                    <img src="pintura.jpeg" alt="Evento de pintura" />
+                    <h3>Pinturas de Salvador</h3>
+                    <p>15/06/2025</p>
+                </div>
+                <div class="evento escultura">
+                    <img src="escultura.png" alt="Evento de escultura" />
+                    <h3>Escultura Contemporânea</h3>
+                    <p>02/06/2025</p>
                 </div>
                 <div class="evento fotografia">
                     <img src="fotografia.jpg" alt="Evento de fotografia" />
@@ -125,17 +146,18 @@
     <footer>
         <div class="newsletter">
             <h3>Assine nossa newsletter</h3>
-            <form>
-                <input type="email" placeholder="Seu e-mail" aria-label="Email para newsletter" required />
+            <form id="newsletter" novalidate>
+                <input type="email" id="email" placeholder="Seu e-mail" aria-label="Email para newsletter" required />
                 <button type="submit">Inscrever-se</button>
             </form>
+            <span class="email-error" id="email-error"></span>
         </div>
         <div class="social" aria-label="Redes sociais">
             <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
             <a href="#"><i class="fab fa-instagram social-icon"></i></a>
             <a href="#"><i class="fab fa-twitter social-icon"></i></a>
         </div>
-        <p>&copy; 2025 Casa Bahia. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Casa L'arte Bahia. Todos os direitos reservados.</p>
     </footer>
 
     <script src="scripts.js"></script>
