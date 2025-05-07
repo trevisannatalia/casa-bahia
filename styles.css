@@ -19,6 +19,10 @@ header {
   z-index: 1000;
 }
 
+.header-content {
+  padding: 0.2rem;
+}
+
 nav h1 {
   font-size: 1.8rem;
   font-weight: 600;
@@ -124,17 +128,18 @@ nav ul li a:hover {
 }
 
 .filter {
-  background-color: #6483c3;
+  background-color: #16379c;
   color: white;
   border: none;
   margin: 0 0.5rem;
   padding: 0.5rem 1rem;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   cursor: pointer;
+  margin-block: 0.5rem;
 }
 
 .filter:hover {
-  background-color: #16379c;
+  text-decoration: underline;
 }
 
 .eventos {
@@ -147,7 +152,7 @@ nav ul li a:hover {
 .evento {
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   width: 280px;
   transition: transform 0.3s;
@@ -203,8 +208,8 @@ footer {
   text-align: center;
 }
 
-footer .newsletter {
-  margin-bottom: 1rem;
+#newsletter {
+  padding: 0.5rem;
 }
 
 footer input[type="email"] {
@@ -223,12 +228,144 @@ footer button {
   cursor: pointer;
 }
 
+footer .email-error {
+  color: rgb(243, 95, 95); 
+  font-size: 1.0em;
+}
+
+.social {
+  padding: 0.5rem;
+}
+
 footer .social a img {
   width: 24px;
-  margin: 0 15px;
+  padding: 0.5rem;
 }
 
 .social-icon {
   color: white;
   font-size: 20px;
+}
+
+/* --- MENU MOBILE --- */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+  }
+
+  nav h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: none;
+    background: #16379c;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1001;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .header-info {
+    width: 100%;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  /* Corrige programação quebrada */
+  .eventos {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .evento {
+    width: 95%;
+    max-width: 320px;
+  }
+  .artistas-lista {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
+
+/* Linha do título e hamburguer */
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* hamburguer à direita; use flex-start para à esquerda */
+  width: 100%;
+}
+
+/* Esconde o hamburguer no desktop */
+.menu-toggle {
+  display: none;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-row {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #16379c;
+    margin: 0;
+    padding: 0.5rem 0;
+    position: static;
+  }
+  nav ul.active {
+    display: flex;
+  }
 }
