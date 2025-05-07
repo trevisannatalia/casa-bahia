@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Bahia</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>L’arte Bahia</h1>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#imersao">Imersão Artística</a></li>
+                <li><a href="#artistas">Artistas</a></li>
+                <li><a href="#cafeteria">Cafeteria</a></li>
+                <li><a href="#exposicoes">Exposições</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- NOVO: Informações do lado direito -->
+        <div class="header-info">
+            <div class="horarios">
+                <strong>Funcionamento:</strong> Ter-Dom, 10h às 17h30
+            </div>
+            <div class="contatos">
+                <span>contato@casabahia.com</span> | <span>(71) 99999-9999</span>
+            </div>
+            <div class="redes-sociais">
+                <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
+                <a href="#"><i class="fab fa-instagram social-icon"></i></a>
+                <a href="#"><i class="fab fa-twitter social-icon"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="carousel" aria-label="Carrossel de destaques">
+        <div class="slides">
+            <img src="img01.jpg" alt="Exposição 1" class="active" />
+            <img src="img02.jpg" alt="Exposição 2" />
+            <img src="img03.jpg" alt="Exposição 3" />
+        </div>
+        <div class="carousel-controls">
+            <button id="prev" aria-label="Imagem anterior">&#10094;</button>
+            <button id="next" aria-label="Próxima imagem">&#10095;</button>
+        </div>
+        <div class="dots" aria-label="Navegação do carrossel"></div>
+    </section>
+
+    <main>
+        <section id="sobre" class="section">
+            <h2>Sobre</h2>
+            <p>A Casa Bahia é um centro cultural independente que celebra a diversidade das expressões artísticas do
+                Nordeste e do Brasil contemporâneo. Localizada no coração de Salvador, abriga projetos, encontros,
+                oficinas, experiências e exposições com foco em acessibilidade, formação e experimentação artística.</p>
+        </section>
+
+        <section id="imersao" class="section">
+            <h2>Imersão Artística</h2>
+            <p>Nosso programa de imersão artística recebe criadores de diferentes áreas para residências temporárias,
+                incentivando o cruzamento entre territórios, culturas e linguagens. Um espaço vivo para criação, escuta
+                e troca.</p>
+        </section>
+
+        <section id="exposicoes" class="section">
+            <div class="section-title">
+                <h2>Programação</h2>
+                <div class="filters" aria-label="Filtro de eventos">
+                    <button class="filter" data-filter="todos">Todos</button>
+                    <button class="filter" data-filter="escultura">Escultura</button>
+                    <button class="filter" data-filter="pintura">Pintura</button>
+                    <button class="filter" data-filter="fotografia">Fotografia</button>
+                </div>
+            </div>
+            <div class="eventos">
+                <div class="evento escultura">
+                    <img src="escultura.png" alt="Evento de escultura" />
+                    <h3>Escultura Contemporânea</h3>
+                    <p>02/06/2025</p>
+                </div>
+                <div class="evento pintura">
+                    <img src="pintura.jpeg" alt="Evento de pintura" />
+                    <h3>Pinturas de Salvador</h3>
+                    <p>15/06/2025</p>
+                </div>
+                <div class="evento fotografia">
+                    <img src="fotografia.jpg" alt="Evento de fotografia" />
+                    <h3>Olhares do Recôncavo</h3>
+                    <p>30/06/2025</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="artistas" class="section">
+            <h2>Artistas</h2>
+            <div class="artistas-lista">
+                <div class="artista">
+                    <img src="imgprofile.jpeg" alt="Maria Silva" />
+                    <h3>Maria Silva</h3>
+                    <p>Artista visual baiana, seu trabalho explora memórias afro-brasileiras através da pintura e da
+                        performance.</p>
+                </div>
+                <div class="artista">
+                    <img src="imgprofile.jpeg" alt="Júlio Costa" />
+                    <h3>Júlio Costa</h3>
+                    <p>Fotógrafo documental do sertão nordestino, retrata resistências culturais em territórios
+                        periféricos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cafeteria" class="section">
+            <h2>Cafeteria</h2>
+            <p>Nosso café é também um ponto de encontro: com cardápio sazonal, produtos artesanais da região e um
+                ambiente acolhedor, ele mistura gastronomia e arte como parte da experiência cultural da Casa.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="newsletter">
+            <h3>Assine nossa newsletter</h3>
+            <form>
+                <input type="email" placeholder="Seu e-mail" aria-label="Email para newsletter" required />
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </div>
+        <div class="social" aria-label="Redes sociais">
+            <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
+            <a href="#"><i class="fab fa-instagram social-icon"></i></a>
+            <a href="#"><i class="fab fa-twitter social-icon"></i></a>
+        </div>
+        <p>&copy; 2025 Casa Bahia. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
