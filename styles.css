@@ -1,0 +1,234 @@
+/* Fonte base */
+body {
+  margin: 0;
+  font-family: 'Instrument Sans', sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+}
+
+/* Navegação */
+header {
+  background-color: #16379c; 
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Carrossel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-height: 500px;
+  background: #fdfdfd;
+}
+
+.carousel .slides img {
+  width: 100%;
+  display: none;
+  height: auto;
+  object-fit: cover;
+}
+
+.carousel .slides img.active {
+  display: block;
+}
+
+.carousel-controls button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dots span {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dots span.active {
+  background-color: #333;
+}
+
+/* Seções principais */
+.section {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color: #16379c;
+  margin-bottom: 1rem;
+}
+
+/* Programação */
+.programacao {
+  background-color: #fef3c7;
+  padding: 3rem 2rem;
+}
+
+.filters {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.filter {
+  background-color: #6483c3;
+  color: white;
+  border: none;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  cursor: pointer;
+}
+
+.filter:hover {
+  background-color: #16379c;
+}
+
+.eventos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.evento {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s;
+}
+
+.evento:hover {
+  transform: scale(1.02);
+}
+
+.evento img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.evento h3 {
+  margin: 0.5rem 1rem 0;
+}
+
+.evento p {
+  margin: 0.5rem 1rem 1rem;
+  color: #555;
+}
+
+/* Artistas */
+.artistas-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.artista {
+  width: 250px;
+  text-align: center;
+}
+
+.artista img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Cafeteria */
+#cafeteria {
+  background-color: #e2e7f8;
+}
+
+/* Newsletter + Footer */
+footer {
+  background-color: #16379c;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer .newsletter {
+  margin-bottom: 1rem;
+}
+
+footer input[type="email"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  margin-right: 0.5rem;
+}
+
+footer button {
+  padding: 0.5rem 1rem;
+  background-color: #ffb703;
+  color: #333;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+footer .social a img {
+  width: 24px;
+  margin: 0 15px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 20px;
+}
